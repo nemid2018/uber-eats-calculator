@@ -20,7 +20,6 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
-    // Never expose source code in production builds
     sourcemap: false,
   },
 }));
