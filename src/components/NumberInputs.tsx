@@ -158,8 +158,6 @@ const NumberInputs = ({
         <div className="flex justify-between items-center mb-3 h-7">
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground">UBER EATS ORDER BOOST</span>
-            <span className="text-sm text-muted-foreground">—</span>
-            <span className="text-sm text-muted-foreground">{boostMode === "pct" ? "% INCREASE" : "ORDERS PER DAY"}</span>
             <button
               onClick={() => setBoostMode(boostMode === "pct" ? "orders" : "pct")}
               className="flex rounded-full bg-secondary overflow-hidden text-xs cursor-pointer"
@@ -167,6 +165,7 @@ const NumberInputs = ({
               <span className={`px-3 py-1 transition-colors ${boostMode === "pct" ? "bg-uber-green text-accent-foreground" : "text-muted-foreground"}`}>%</span>
               <span className={`px-3 py-1 transition-colors ${boostMode === "orders" ? "bg-uber-green text-accent-foreground" : "text-muted-foreground"}`}>#</span>
             </button>
+            <span className="text-sm text-muted-foreground">{boostMode === "pct" ? "% INCREASE" : "ORDERS PER DAY"}</span>
           </div>
           {boostMode === "pct" ? (
             <EditableValue value={uberOrderBoost} onChange={setUberOrderBoost} suffix="%" min={0} max={10000} />
