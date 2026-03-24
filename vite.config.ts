@@ -2,8 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/uber-eats-calculator/" : "/",
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
@@ -20,6 +19,7 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
+    // Never expose source code in production builds
     sourcemap: false,
   },
-}));
+});
