@@ -155,9 +155,11 @@ const NumberInputs = ({
 
       {/* Uber Eats Order Boost - full width */}
       <div className="mt-8 pt-8 border-t border-border">
+        <div className="mb-3">
+          <span className="text-sm text-muted-foreground">UBER EATS ORDER BOOST</span>
+        </div>
         <div className="flex justify-between items-center mb-3 h-7">
           <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground">UBER EATS ORDER BOOST</span>
             <button
               onClick={() => setBoostMode(boostMode === "pct" ? "orders" : "pct")}
               className="flex rounded-full bg-secondary overflow-hidden text-xs cursor-pointer"
